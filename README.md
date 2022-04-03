@@ -6,7 +6,7 @@ Once loaded you you will have the "execute" function available in SQL that will 
 
 To be able to use this you need to:
 
-1. Be able to upload arbitraty files or place where the sqlite process can access it (this compiled module)
+1. Be able to upload arbitraty files and place them where the sqlite process can access it (this compiled module). Windows can access through samba shares, buts that another ball game.
 2. Have a working SQL injection vulnerability
 
 
