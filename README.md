@@ -1,6 +1,7 @@
 # sqlite-execute-module
 
 Brain-dead simple sqlite execute module to aid in the RCE in SQLite instances that allow load_extension SQL function under Linux.
+This is just a very lame and simple PoC that I did for a small part of a pentest, and using it will be very visible in logs.
 
 Once loaded you will have the "execute" function available in SQL that will pass along any command you specify as parameter to a stdlib's os.system() call. This can be change to whatever you want but serves the purpose to demostrate how easy is to do it.
 
@@ -33,10 +34,10 @@ select execute("ls");
 ```
 
 Beware that this is  SQL function, so if you use it in an injection it might execute numerous times, be careful. 
-Also, this is just a very lame and simple PoC that I did for a small part of a pentest, and using it will be very visible in logs, this can be easily converted to include a reverse shell payload or whatever you like. As always, be nice.
+This module can be easily converted to include a reverse shell payload or whatever you like. As always, be nice.
 
 
 How to compile
 --------------
 
-Theres a Makefile, just run `make` it will generate the sqlite-execute-module.so. This is a shared library, if you want you can statically compile it, [DYOR](https://www.sqlite.org/loadext.html), it's easy. Theres a `test-command` script to load and execute an `ls` locally to test it.
+There's a Makefile, just run `make` it will generate the sqlite-execute-module.so. This is a shared library, if you want you can statically compile it, [DYOR](https://www.sqlite.org/loadext.html), it's easy. Theres a `test-command` script to load and execute an `ls` locally to test it.
