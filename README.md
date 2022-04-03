@@ -14,7 +14,7 @@ For security reasons, and by default, [SQLite does NOT allow to use the function
 
 Usage
 -----
-If you somehow manage to find an instance that does allow it and you can put this file somewhere were the process using the SQLite DB can reach, then you can load it with and injection, like:
+If you somehow manage to find an instance that does allow it and you can put this file somewhere were the process using the SQLite DB can reach, then you can load it with an injection, like:
 
 
 ```SQL
@@ -39,4 +39,4 @@ Also, this is just a very lame and simple PoC that I did for a small part of a p
 How to compile
 --------------
 
-Theres a Makefile, just run `make` it will generate the sqlite-execute-module.so. This is a shared library, if you want you can statically compile it, [DYOR](https://www.sqlite.org/loadext.html), it's easy.
+Theres a Makefile, just run `make` it will generate the sqlite-execute-module.so. This is a shared library, if you want you can statically compile it, [DYOR](https://www.sqlite.org/loadext.html), it's easy. Theres a `test-command` script to load and execute an `ls` locally to test it.
