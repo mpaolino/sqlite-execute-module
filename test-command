@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+tail -n +4 "$0" | sqlite3
+exit $?
+
+-- sql commands
+.load "./sqlite-execute-module.so"
+select execute("ls")
