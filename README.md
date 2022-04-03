@@ -2,7 +2,7 @@
 
 Brain-dead simple sqlite execute module to aid in the RCE in SQLite instances that allow load_extension SQL function under Linux.
 
-Once loaded you you will have the "execute" function available in SQL that will pass along any command you specify as parameter to a stdlib's os.system() call. This can be change to whatever you want but serves the purpose to demostrate how easy is to do it.
+Once loaded you will have the "execute" function available in SQL that will pass along any command you specify as parameter to a stdlib's os.system() call. This can be change to whatever you want but serves the purpose to demostrate how easy is to do it.
 
 To be able to use this you need to:
 
